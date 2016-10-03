@@ -26,11 +26,11 @@ namespace Histogram {
       }
     }
     public void PlotFrequency() {
-      Console.WriteLine("{0, -15}{1, 20}{2, 20}\n" + 
-                        "*********************************************************\n", 
+      Console.WriteLine("{0, -10}{1, 17}{2, 20}\n" + 
+                        "****************************************************\n", 
                                            "Counter Number", "Limits", "Frequency");
       for (int i = 0; i < counters.Length; i++) {
-        Console.WriteLine("{0, -15}{1, 20}{2, 20}\n", $"Counter {i}", $"{limits[i]} <= x < {limits[i+1]}", counters[i]);
+        Console.WriteLine("{0, -15}{1, 20}{2, 13}\n", $"Counter {i}", $"{limits[i]} <= x < {limits[i+1]}", counters[i]);
       }
     }
   }
