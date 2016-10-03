@@ -4,26 +4,25 @@ namespace Histogram {
   public class Histogram {
     private int[] counters;
     private double[] limits; 
-    public Histogram(int numOfCounter, double maxLimit, double minLimit) {
+    public Histogram(double maxLimit, double minLimit, int numOfCounter = 10) {
        counters = new int[numOfCounter];
        limits = new double[numOfCounter];
-       limits[0] = minLimit;
-       limits[numOfCounter - 1] = maxLimit;
-    }
-    public Histogram(double maxLimit, double minLimit) {
-      counters = new int[10];
-      limits = new double[10];
-      limits[0] = minLimit;
-      limits[9] = maxLimit;
+       SetInterval(numOfCounter, maxLimit, minLimit);
     }
     public void Add(double x) {
       foreach (double limit in limits)
         if (x < limit) counters[Array.IndexOf(limits, limit)]++;
     }
-    
     public void Reset() {
       for(int i = 0; i < counters.Length; i++)
         counters[i] = 0;
+    }
+    private void SetInterval(int numOfInterval, double maxLimit, double minLimit) {
+      double tempLimit = 0;
+      for(int i = 0; i < numOfInterval; i++) {
+        limits[i] = tempLimit + (maxLimit - minLimit) / numOfInterval;
+        tempLimit += limits[i]; 
+      }
     }
 
   }
