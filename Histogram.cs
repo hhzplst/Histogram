@@ -3,11 +3,12 @@ using System.Linq;
 
 namespace Histogram {
   public class Histogram {
+    const int SCALE_MAX = 20;
     private int[] counters;
     private int[] cumulativeCounters;
     private double[] limits;
     private int countersMax, cumulativeCountersMax;
-    const int SCALE_MAX = 20;
+   
     public Histogram(double minLimit, double maxLimit, int numOfCounter = 10) {
       if (minLimit >= maxLimit)
         throw new ArgumentException("Maximum limit must be greater than the minimum limit!");
