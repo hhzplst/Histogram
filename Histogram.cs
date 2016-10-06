@@ -1,10 +1,13 @@
 using System;
+using System.Linq;
 
 namespace Histogram {
   public class Histogram {
     private int[] counters;
     private int[] cumulativeCounters;
-    private double[] limits; 
+    private double[] limits;
+    private int countersMax, cumulativeCountersMax;
+    const int SCALE_MAX = 20;
     public Histogram(double minLimit, double maxLimit, int numOfCounter = 10) {
       if (minLimit >= maxLimit)
         throw new ArgumentException("Maximum limit must be greater than the minimum limit!");
@@ -39,19 +42,33 @@ namespace Histogram {
       }
     }
     public void PlotFrequency() {
-      PlotHeader();
+      CalculateMax();
+      PlotHeader("Frequency");
       for (int i = 0; i < counters.Length; i++)
-        Console.WriteLine("{0, -15}{1, 20}{2, 13}\n", $"Counter {i}", $"{limits[i]} <= x < {limits[i+1]}", counters[i]);
+        Console.WriteLine("{0, -15}{1, -20}{2, -13}{3, -15}\n", $"Counter {i}", $"{limits[i]} <= x < {limits[i+1]}", 
+                                                                  counters[i], DrawBar(counters[i], countersMax));
     }
     public void PlotCumulative() {
-      PlotHeader();
+      CalculateMax();
+      PlotHeader("Qumulative");
       for (int i = 0; i < cumulativeCounters.Length; i++)
-        Console.WriteLine("{0, -15}{1, 20}{2, 13}\n", $"Counter {i}", $"{limits[i]} <= x < {limits[i+1]}", cumulativeCounters[i]);
+        Console.WriteLine("{0, -15}{1, -20}{2, -13}{3, -15}\n", $"Counter {i}", $"{limits[i]} <= x < {limits[i+1]}", 
+                                                  cumulativeCounters[i], DrawBar(cumulativeCounters[i], cumulativeCountersMax));
     }
-    private void PlotHeader() {
-      Console.WriteLine("\n\n{0, -10}{1, 17}{2, 20}\n" + 
-                        "****************************************************\n", 
-                                           "Counter Number", "Limits", "Frequency");
+    private void CalculateMax() {
+      countersMax = counters.Max();
+      cumulativeCountersMax = cumulativeCounters.Max();
+    }
+    private void PlotHeader(string type) {
+      Console.WriteLine("\n\n{0, -15}{1, -20}{2, -13}{3, 10}\n" + 
+                        "*********************************************************************\n", 
+                                           "Counter", "Limits", type, "Bar");
+    }
+    private string DrawBar(int counter, int max) {
+      string result = "";
+      for (int i = 0; i < counter * SCALE_MAX / max; i++)
+        result += "#";
+      return result;
     }
   }
 }
