@@ -40,111 +40,111 @@ Compilation succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time elapsed 00:00:01.4099064
+Time elapsed 00:00:02.2725519
  
 
 Generating Histogram from 0 to 1.0...
 
 
-Counter Number           Limits           Frequency
-****************************************************
+Counter        Limits              Frequency           Bar
+*********************************************************************
 
-Counter 0              0 <= x < 0.1         1025
+Counter 0      0 <= x < 0.1        918          #################
 
-Counter 1            0.1 <= x < 0.2          991
+Counter 1      0.1 <= x < 0.2      1025         ###################
 
-Counter 2            0.2 <= x < 0.3         1007
+Counter 2      0.2 <= x < 0.3      1041         ####################
 
-Counter 3            0.3 <= x < 0.4          987
+Counter 3      0.3 <= x < 0.4      994          ###################
 
-Counter 4            0.4 <= x < 0.5          982
+Counter 4      0.4 <= x < 0.5      953          ##################
 
-Counter 5            0.5 <= x < 0.6          990
+Counter 5      0.5 <= x < 0.6      1025         ###################
 
-Counter 6            0.6 <= x < 0.7         1009
+Counter 6      0.6 <= x < 0.7      979          ##################
 
-Counter 7            0.7 <= x < 0.8          965
+Counter 7      0.7 <= x < 0.8      1025         ###################
 
-Counter 8            0.8 <= x < 0.9         1017
+Counter 8      0.8 <= x < 0.9      1008         ###################
 
-Counter 9              0.9 <= x < 1         1027
+Counter 9      0.9 <= x < 1        1032         ###################
 
 
 
-Counter Number           Limits           Frequency
-****************************************************
+Counter        Limits              Qumulative          Bar
+*********************************************************************
 
-Counter 0              0 <= x < 0.1         1025
+Counter 0      0 <= x < 0.1        918          #              
 
-Counter 1            0.1 <= x < 0.2         2016
+Counter 1      0.1 <= x < 0.2      1943         ###            
 
-Counter 2            0.2 <= x < 0.3         3023
+Counter 2      0.2 <= x < 0.3      2984         #####          
 
-Counter 3            0.3 <= x < 0.4         4010
+Counter 3      0.3 <= x < 0.4      3978         #######        
 
-Counter 4            0.4 <= x < 0.5         4992
+Counter 4      0.4 <= x < 0.5      4931         #########      
 
-Counter 5            0.5 <= x < 0.6         5982
+Counter 5      0.5 <= x < 0.6      5956         ###########    
 
-Counter 6            0.6 <= x < 0.7         6991
+Counter 6      0.6 <= x < 0.7      6935         #############  
 
-Counter 7            0.7 <= x < 0.8         7956
+Counter 7      0.7 <= x < 0.8      7960         ###############
 
-Counter 8            0.8 <= x < 0.9         8973
+Counter 8      0.8 <= x < 0.9      8968         #################
 
-Counter 9              0.9 <= x < 1        10000
+Counter 9      0.9 <= x < 1        10000        ####################
 
 Resetting the Histogram...
 Generating Histogram from 0 to 10...
 
 
-Counter Number           Limits           Frequency
-****************************************************
+Counter        Limits              Frequency           Bar
+*********************************************************************
 
-Counter 0                0 <= x < 1            0
+Counter 0      0 <= x < 1          0                           
 
-Counter 1                1 <= x < 2            0
+Counter 1      1 <= x < 2          0                           
 
-Counter 2                2 <= x < 3           11
+Counter 2      2 <= x < 3          8                           
 
-Counter 3                3 <= x < 4          135
+Counter 3      3 <= x < 4          131          #######        
 
-Counter 4                4 <= x < 5          367
+Counter 4      4 <= x < 5          364          ####################
 
-Counter 5                5 <= x < 6          356
+Counter 5      5 <= x < 6          363          ###################
 
-Counter 6                6 <= x < 7          111
+Counter 6      6 <= x < 7          119          ######         
 
-Counter 7                7 <= x < 8           19
+Counter 7      7 <= x < 8          13                          
 
-Counter 8                8 <= x < 9            1
+Counter 8      8 <= x < 9          2                           
 
-Counter 9               9 <= x < 10            0
+Counter 9      9 <= x < 10         0                           
 
 
 
-Counter Number           Limits           Frequency
-****************************************************
+Counter        Limits              Qumulative          Bar
+*********************************************************************
 
-Counter 0                0 <= x < 1            0
+Counter 0      0 <= x < 1          0                           
 
-Counter 1                1 <= x < 2            0
+Counter 1      1 <= x < 2          0                           
 
-Counter 2                2 <= x < 3           11
+Counter 2      2 <= x < 3          8                           
 
-Counter 3                3 <= x < 4          146
+Counter 3      3 <= x < 4          139          ##             
 
-Counter 4                4 <= x < 5          513
+Counter 4      4 <= x < 5          503          ##########     
 
-Counter 5                5 <= x < 6          869
+Counter 5      5 <= x < 6          866          #################
 
-Counter 6                6 <= x < 7          980
+Counter 6      6 <= x < 7          985          ###################
 
-Counter 7                7 <= x < 8          999
+Counter 7      7 <= x < 8          998          ###################
 
-Counter 8                8 <= x < 9         1000
+Counter 8      8 <= x < 9          1000         ####################
 
-Counter 9               9 <= x < 10         1000
+Counter 9      9 <= x < 10         1000         ####################
 
 
 *******************************************END TEST OUTPUT******************************************/
